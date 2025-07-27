@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #646cff;
+  --primary-hover: #535bf2;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --background-color: #242424;
+  --button-bg: #1a1a1a;
+  --border-radius: 8px;
+  
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: light dark;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: inherit;
+  transition: color 0.25s;
+}
+a:hover {
+  color: var(--primary-hover);
+}
+
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.2em); /* Responsive font size */
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+button {
+  border-radius: var(--border-radius);
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--button-bg);
+  cursor: pointer;
+  transition: all 0.25s;
+  width: 100%;
+  max-width: 300px; /* Better for mobile */
+}
+button:hover {
+  border-color: var(--primary-color);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Container for better content organization */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+/* Utility classes for spacing */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+/* Responsive grid example */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Light mode adjustments */
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #213547;
+    --background-color: #ffffff;
+    --button-bg: #f9f9f9;
+  }
+  a:hover {
+    color: #747bff;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 0.5rem;
+  }
+  
+  button {
+    padding: 0.5em 1em;
+  }
+  
+  .container {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  button {
+    font-size: 0.9em;
+  }
+}

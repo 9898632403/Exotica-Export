@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+#root {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Disable text selection globally */
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Allow text selection only where needed */
+.copy-enabled {
+  user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+}
+
+/* Logo Styles */
+.logo {
+  height: auto;
+  max-height: 6em;
+  width: auto;
+  max-width: 100%;
+  padding: 1rem;
+  will-change: filter;
+  transition: filter 300ms ease-in-out;
+  margin: 0 auto;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 1.5em rgba(100, 108, 255, 0.67));
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 1.5em rgba(97, 218, 251, 0.67));
+}
+
+/* Logo Animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: no-preference) {
+  .logo.spin {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+
+/* Card Component */
+.card {
+  padding: 1.5rem;
+  margin: 1rem auto;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  max-width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Typography */
+.read-the-docs {
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  opacity: 0.8;
+}
+
+/* Layout Components */
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #root {
+    padding: 0.75rem;
+  }
+
+  .logo {
+    padding: 0.75rem;
+    max-height: 5em;
+  }
+
+  .card {
+    padding: 1rem;
+    margin: 0.75rem auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #root {
+    padding: 0.5rem;
+  }
+
+  .logo {
+    max-height: 4em;
+    padding: 0.5rem;
+  }
+
+  .card {
+    padding: 0.75rem;
+    border-radius: 8px;
+  }
+
+  .read-the-docs {
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* Dark/Light Mode Compatibility */
+@media (prefers-color-scheme: light) {
+  .card {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .read-the-docs {
+    color: #666;
+  }
+}

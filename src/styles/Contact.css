@@ -1,0 +1,449 @@
+/* Base Styles */
+:root {
+  --carbon-black: #0D0D0D;
+  --jet-black: #1A1A1A;
+  --platinum-glow: #E5E4E2;
+  --ice-silver: #C0C0C0;
+  --ice-silver-light: #D6D6D6;
+  --soft-white: #F2F2F2;
+  --steel-gray: #B0B0B0;
+  --premium-crimson: #CA2126;
+  --glassmorphism-bg: rgba(26, 26, 26, 0.85);
+  --glassmorphism-border: rgba(229, 228, 226, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: var(--carbon-black);
+  color: var(--soft-white);
+  line-height: 1.6;
+}
+
+/* Contact Container */
+.contact-container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.global-trade-pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(var(--ice-silver-light) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* Contact Hero */
+.contact-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  z-index: 1;
+}
+
+.contact-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(to right, var(--platinum-glow), var(--ice-silver-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+}
+
+.contact-hero p {
+  font-size: 1.1rem;
+  color: var(--steel-gray);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Form Styles */
+.contact-form, .thank-you {
+  width: 100%;
+  max-width: 900px;
+  background: var(--glassmorphism-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glassmorphism-border);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form::before, .thank-you::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(229, 228, 226, 0.1) 0%, rgba(13, 13, 13, 0) 70%);
+  pointer-events: none;
+}
+
+.form-section {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.form-section:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: -1.25rem;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ice-silver), transparent);
+  opacity: 0.2;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--platinum-glow);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.title-icon {
+  font-size: 1.1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--ice-silver);
+  font-weight: 500;
+}
+
+.required {
+  color: var(--premium-crimson);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  background-color: rgba(26, 26, 26, 0.7);
+  border: 1px solid var(--ice-silver);
+  border-radius: 6px;
+  color: var(--soft-white);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--platinum-glow);
+  box-shadow: 0 0 0 2px rgba(229, 228, 226, 0.2);
+  background-color: rgba(26, 26, 26, 0.9);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--steel-gray);
+  opacity: 0.7;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select {
+  appearance: none;
+  padding-right: 2.5rem;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ice-silver);
+  pointer-events: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Form Footer */
+.form-footer {
+  margin-top: 2rem;
+}
+
+.disclaimer {
+  font-size: 0.85rem;
+  color: var(--steel-gray);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.disclaimer a {
+  color: var(--ice-silver);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--ice-silver);
+  transition: color 0.3s ease;
+}
+
+.disclaimer a:hover {
+  color: var(--platinum-glow);
+  border-bottom-color: var(--platinum-glow);
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--premium-crimson) 0%, #9c1317 100%);
+  color: var(--soft-white);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  transition: all 0.5s ease;
+}
+
+.submit-button:hover::before {
+  left: 100%;
+}
+
+.submit-button:disabled {
+  background: var(--steel-gray);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.button-icon {
+  font-size: 1.1rem;
+}
+
+.button-loading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--soft-white);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Thank You Message */
+.thank-you {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.success-icon {
+  font-size: 3.5rem;
+  color: var(--premium-crimson);
+  margin-bottom: 1.5rem;
+}
+
+.thank-you h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--platinum-glow);
+}
+
+.success-message {
+  font-size: 1.1rem;
+  color: var(--ice-silver);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.next-steps {
+  text-align: left;
+  background: rgba(26, 26, 26, 0.5);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  border-left: 3px solid var(--premium-crimson);
+}
+
+.next-steps h3 {
+  color: var(--platinum-glow);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.next-steps ul {
+  list-style-type: none;
+}
+
+.next-steps li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--ice-silver);
+}
+
+.next-steps li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--premium-crimson);
+}
+
+.emergency-contact {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: var(--steel-gray);
+}
+
+.emergency-contact a {
+  color: var(--platinum-glow);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.emergency-contact a:hover {
+  color: var(--premium-crimson);
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .contact-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .contact-form, .thank-you {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 1.5rem;
+  }
+  
+  .contact-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-hero p {
+    font-size: 1rem;
+  }
+  
+  .contact-form, .thank-you {
+    padding: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.1rem;
+  }
+  
+  input, textarea, select {
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 1rem;
+  }
+  
+  .contact-hero h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-form, .thank-you {
+    padding: 1.25rem;
+  }
+  
+  .form-section {
+    margin-bottom: 2rem;
+  }
+  
+  .submit-button {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
+  
+  .thank-you h2 {
+    font-size: 1.4rem;
+  }
+  
+  .success-message {
+    font-size: 1rem;
+  }
+}
+
+/* Animation Enhancements */
+@keyframes subtleGlow {
+  0%, 100% { box-shadow: 0 0 10px rgba(229, 228, 226, 0.1); }
+  50% { box-shadow: 0 0 15px rgba(229, 228, 226, 0.2); }
+}
+
+.contact-form {
+  animation: subtleGlow 6s ease-in-out infinite;
+}
