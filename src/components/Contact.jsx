@@ -289,8 +289,8 @@ const Contact = () => {
                   required
                 >
                   <option value="">Select volume range</option>
-                  <option value="LTL (Less Than Truckload)">LTL (Less Than Truckload)</option>
-                  <option value="FTL (Full Truckload)">FTL (Full Truckload)</option>
+                  <option value="LCL (less container loaded )">LCL (less container loaded )</option>
+                  <option value="FCL (full container loaded)">FCL (full container loaded)</option>
                   <option value="1-5 Containers">1-5 Containers</option>
                   <option value="5-20 Containers">5-20 Containers</option>
                   <option value="20+ Containers">20+ Containers</option>

@@ -21,13 +21,13 @@ const Footer = () => {
         </nav>
 
         <div className="social-media">
-          <a href="https://instagram.com" aria-label="Instagram" className="social-icon">
+          <a href="https://www.instagram.com/exoticaexport?igsh=N244M3k3eGdlenpj" aria-label="Instagram" className="social-icon">
             <FaInstagram />
           </a>
-          <a href="https://linkedin.com" aria-label="LinkedIn" className="social-icon">
+          <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=exotica-export-33b6b3377 " aria-label="LinkedIn" className="social-icon">
             <FaLinkedin />
           </a>
-          <a href="https://wa.me" aria-label="WhatsApp" className="social-icon">
+          <a href="https://wa.me/message/NUHJME5BEGZFB1 " aria-label="WhatsApp" className="social-icon">
             <FaWhatsapp />
           </a>
         </div>
