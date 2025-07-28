@@ -508,7 +508,7 @@ const AboutPage = () => {
                 transition={{ delay: 0.2 }}
               >
                 <h3>Contact Information</h3>
-                <p><strong>Phone:</strong>+91 849089902</p>
+                <p><strong>Phone:</strong>+91 8490899902</p>
                 <p><strong>Email:</strong> exoticaaexport@gmail.com</p>
               </motion.div>
               
