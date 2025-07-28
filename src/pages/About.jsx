@@ -594,7 +594,7 @@ const AboutPage = () => {
                   
                   {/* Main card image */}
                   <img 
-                    src={visitCardImage} 
+                    src="/images/final_visit.jpg"
                     alt="Exotica Export Visiting Card" 
                     className="visiting-card"
                   />
