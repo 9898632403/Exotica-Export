@@ -95,18 +95,18 @@ const AboutPage = () => {
   // Testimonials data
   const testimonials = [
     {
-      quote: "Exotica Export made our first export shipment surprisingly smooth. Their support with documentation really helped us avoid delays.",
-      name: "Deep josi",
+      quote: "Handled our initial export orders with full compliance and support, ensuring smooth customs clearance.",
+      name: "Milestone: Strong First Steps",
       rating: 5
     },
     {
-      quote: " As a new exporter, I honestly needed a bit of hand-holding. The EXotica Export's team was patient, responsive, and explained everything clearly.",
-      name: "Rahul Mehta",
-      rating: 4
+      quote: "Built a reliable export process tailored for small and mid-scale businesses starting their global journey.",
+      name: "Milestone: Startup Support",
+      rating: 5
     },
     {
-      quote: "Their freight rates were competitive, and the attention to detail saved us both time and cost. Helped a lot with our Dubai shipment.",
-      name: "Anil Patel",
+      quote: "Focused on transparency, timely communication, and helping new exporters understand documentation easily.",
+      name: "Milestone: Trusted Onboarding",
       rating: 5
     }
   ];
@@ -438,9 +438,9 @@ const AboutPage = () => {
             viewport={{ once: true }}
             variants={fadeUp}
           >
-            Client Experiences
+             Milestones We've Achieved
           </motion.h2>
-          <p className="section-subtitle">Hear from businesses who've grown with us</p>
+          <p className="section-subtitle">Key highlights from our early export journey</p>
           
           <div className="testimonials-container">
             {testimonials.map((testimonial, index) => (

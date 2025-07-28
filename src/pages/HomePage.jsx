@@ -39,22 +39,19 @@ const Home = () => {
   // Testimonials
   const testimonials = [
     {
-      quote: "We used Exotica Export's corrugated boxes for a recent shipment of ceramic items — everything arrived intact. Honestly surprised by the quality at this price point.",
-      name: "Priya sharma",
-      country: "India",
+      quote: "Delivered custom packaging for delicate items like ceramics, ensuring zero breakage during international shipping.",
+      name: "Packaging Milestone",
       rating: 5
     },
     {
-      quote: "Being new to exporting, we weren’t sure about the right packaging. Their team patiently guided us and helped avoid a potential packaging mistake. Really appreciate that.",
-      name: "Rajesh patel",
-      country: "India",
+      quote: "Successfully fulfilled bulk orders of white & brown corrugated boxes tailored for export-grade durability.",
+      name: "Custom Box Solutions",
       rating: 5
     },
     {
-      quote: "What we like most is the consistency. Boxes always arrive on time and quality is solid. It's been a smooth experience so far.",
-      name: "Arvind Mehra",
-      country: "India",
-      rating: 4
+      quote: "Trusted by emerging exporters as a reliable delivery partner for safe, secure, and timely packaging supply.",
+      name: "Your Trusted Delivery Partner",
+      rating: 5
     }
   ];
 
@@ -509,7 +506,7 @@ const Home = () => {
       {/* Testimonials Section */}
       <section className="testimonials-section">
         <div className="container">
-          <h2 className="section-title">Trusted By Exporters Worldwide</h2>
+          <h2 className="section-title">Turning packaging precision into real export success for growing businesses.</h2>
           
           <Swiper
             modules={[Autoplay, Pagination]}
