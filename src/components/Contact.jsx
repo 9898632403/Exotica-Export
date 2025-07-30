@@ -180,7 +180,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="from_name"
-                placeholder="e.g. John Smith"
+
                 value={formData.from_name}
                 onChange={handleChange}
                 required
@@ -192,7 +192,7 @@ const Contact = () => {
               <input
                 type="email"
                 name="from_email"
-                placeholder="your@company.com"
+        
                 value={formData.from_email}
                 onChange={handleChange}
                 required
@@ -322,7 +322,7 @@ const Contact = () => {
               <label>Your Requirements <span className="required">*</span></label>
               <textarea
                 name="message"
-                placeholder="Please include:\n- Specific requirements\n- Time constraints\n- Special handling needs\n- Any other relevant details"
+                placeholder="Any other relevant details..."
                 value={formData.message}
                 onChange={handleChange}
                 required
@@ -333,8 +333,8 @@ const Contact = () => {
 
           <div className="form-footer">
             <p className="disclaimer">
-              By submitting this form, you agree to our <a href="/privacy">Privacy Policy</a> and 
-              consent to our global team contacting you regarding your logistics needs.
+              Thank you for reaching out. By submitting this form, you consent to being contacted by our export specialists to assist with your request. 
+              Your details are transmitted securely and are never stored or shared — your privacy and trust are our priority.
             </p>
             <motion.button 
               type="submit" 
