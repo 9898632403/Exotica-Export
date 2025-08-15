@@ -411,7 +411,7 @@ const Home = () => {
                 icon: <FaHeadset size={40} />,
                 title: "Direct Support",
                 content: "Get advice directly from our founders Naitik Miyani and Parth Sonani on your packaging needs.",
-                stats: "Email: exoticaexport@gmail.com"
+                stats: "Email: exoticaaexport@gmail.com"
               },
               {
                 icon: <FaShieldAlt size={40} />,
