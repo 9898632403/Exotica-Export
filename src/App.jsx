@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 import './App.css';
+import { Analytics } from "@vercel/analytics/react"; // ✅ Added import
 
 // 👇 ScrollToTop component inside App.jsx
 function ScrollToTop() {
@@ -33,6 +34,7 @@ function AppContent() {
         </Routes>
       </div>
       <Footer />
+      <Analytics /> {/* ✅ Safely added at the bottom */}
     </>
   );
 }
